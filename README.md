@@ -47,5 +47,5 @@ class App extends React.Component {
 Use the factory to customize :
 ```js
 import { factory } from 'react-classtree';
-const myDecorator = factory({ separator: '--', propsName: 'cx' });
+const myDecorator = factory({ separator: '--', propName: 'cx' });
 ```
