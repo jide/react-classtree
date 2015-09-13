@@ -9,7 +9,7 @@ const factory = ({ propName = 'classTree', separator = '__' }) => {
         let props = {};
 
         if (element.props[propName]) {
-          props.className = [prefix + element.props[propName], element.props.className].filter(className => !!className).join(' ');
+          props.className = `${prefix}${element.props[propName]} ${element.props.className || ''}`.trim();
           prefix = `${prefix}${element.props[propName]}${separator}`;
         }
 
@@ -32,7 +32,7 @@ const factory = ({ propName = 'classTree', separator = '__' }) => {
       static displayName = displayName;
 
       render(...args) {
-        return convertToClassName(super.render(...args), true);
+        return convertToClassName(super.render(...args));
       }
     };
   };
