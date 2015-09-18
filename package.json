@@ -1,6 +1,6 @@
 {
   "name": "react-classtree",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React CSS class tree",
   "main": "lib/index.js",
   "repository": {

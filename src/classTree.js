@@ -5,7 +5,7 @@ const getDisplayName = Component => Component.displayName || Component.name || '
 const factory = ({ propName = 'classTree', separator = '__' }) => {
   return WrappedComponent => {
     const convertToClassName = (element, prefix = '') => {
-      if (typeof element.type ==='string' && element.props) {
+      if (element.props) {
         let props = {};
 
         if (element.props[propName]) {
